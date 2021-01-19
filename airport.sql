@@ -93,19 +93,6 @@ CREATE TABLE `flights` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `migrations`
---
-
-CREATE TABLE `migrations` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
 --
 -- Tabellenstruktur für Tabelle `password_resets`
 --
@@ -201,11 +188,6 @@ ALTER TABLE `flights`
   ADD KEY `flights_departure_airport_id_foreign` (`departure_airport_id`),
   ADD KEY `flights_arrival_airport_id_foreign` (`arrival_airport_id`);
 
---
--- Indizes für die Tabelle `migrations`
---
-ALTER TABLE `migrations`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indizes für die Tabelle `password_resets`
@@ -262,11 +244,6 @@ ALTER TABLE `boardingpasses`
 ALTER TABLE `flights`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT für Tabelle `migrations`
---
-ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT für Tabelle `roles`
