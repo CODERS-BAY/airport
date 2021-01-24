@@ -22,10 +22,10 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('street', 150);
-            $table->string('appartment_number', 5);
+            $table->string('apartment_number', 5);
             $table->string('city', 150);
             $table->unsignedInteger('zip');
-            $table->string('tel', 25);
+            $table->string('phone', 25);
             $table->rememberToken();
 
             $table->date('created_at')->useCurrent();

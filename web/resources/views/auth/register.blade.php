@@ -11,13 +11,62 @@
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
-
-            <!-- Name -->
+            {{-- Gender --}}
+                <div>
+                    <x-label for="gender" :value="__('Gender')" />
+                    <select id="gender" class="" name="gender">
+                        <option value="Frau">Frau</option>
+                        <option value="Mann">Mann</option>
+                        <option value="Transgender">Transgender</option>
+                    </select>
+                </div>
+            <!-- Firstname -->
             <div>
-                <x-label for="name" :value="__('Name')" />
+                <x-label for="firstname" :value="__('Firstname')" />
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <x-input id="firstname" class="block mt-1 w-full" type="text" name="firstname" :value="old('firstname')" required autofocus />
             </div>
+            <!-- Lastname -->
+            <div>
+                <x-label for="lastname" :value="__('Lastname')" />
+
+                <x-input id="lastname" class="block mt-1 w-full" type="text" name="lastname" :value="old('lastname')" required autofocus />
+            </div>
+            <!-- Street -->
+            <div>
+                <x-label for="street" :value="__('Street')" />
+
+                <x-input id="street" class="block mt-1 w-full" type="text" name="street" :value="old('street')" required autofocus />
+            </div>
+
+            <!-- Apartment Number -->
+            <div>
+                <x-label for="apNumber" :value="__('Apartmentnumber')" />
+
+                <x-input id="apNumber" class="block mt-1 w-full" type="text" name="apNumber" :value="old('apNumber')" required autofocus />
+            </div>
+
+            <!-- City -->
+            <div>
+                <x-label for="city" :value="__('City')" />
+
+                <x-input id="city" class="block mt-1 w-full" type="text" name="city" :value="old('city')" required autofocus />
+            </div>
+
+            <!-- ZIP -->
+            <div>
+                <x-label for="zip" :value="__('ZIP')" />
+
+                <x-input id="zip" class="block mt-1 w-full" type="number" name="zip" :value="old('zip')" required autofocus />
+            </div>
+
+            <!-- Telefon -->
+            <div>
+                <x-label for="phone" :value="__('Phone')" />
+
+                <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus />
+            </div>
+
 
             <!-- Email Address -->
             <div class="mt-4">
